@@ -52,6 +52,10 @@ body {
     transition: 800ms ease-in-out;
 
 }
+
+.black {
+    background-color: black;
+}
 .fondoEsfera::before {
     content: "";
     position: absolute;
@@ -75,6 +79,16 @@ body {
     .fondoEsfera:hover {
         left: -3%;
     }
+
+    .right {
+        left: 50%;
+    }
+
+    .fondoEsfera.right:hover {
+        left: 43%;
+    }
+
+
 .esfera {
     position: absolute;
     height: 50%;
@@ -104,6 +118,10 @@ body {
     z-index: 5;
     cursor: pointer;
     transition: 800ms ease-in-out;
+}
+
+.center {
+    right: -4%;
 }
 
 .crater1 {
@@ -146,6 +164,10 @@ body {
     transition: 800ms ease-in-out;
 }
 
+.abajo {
+    margin-top: 120%;
+}
+
 .n1 {
     position: absolute;
     height: 75%;
@@ -154,7 +176,7 @@ body {
     background-color: white;
 
     right: -15%;
-    bottom: 10%;
+    bottom: -10%;
 }
 
 .n1::before {
@@ -166,7 +188,31 @@ body {
     background-color: rgba(255,255,255);
 
     right: 20%;
-    bottom: 72%;
+    bottom: 40%;
+    opacity: 0.5;
+}
+
+.n2 {
+    position: absolute;
+    height: 75%;
+    width: 30%;
+    border-radius: 50%;
+    background-color: white;
+
+    right: 4%;
+    bottom: -40%;
+}
+
+.n2::before {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    border-radius: 37% 63% 0% 100% / 50% 0% 1% 0%;
+    background-color: rgba(255,255,255);
+
+    right: 0%;
+    bottom: 34%;
     opacity: 0.5;
 }
 
@@ -178,18 +224,21 @@ body {
     background-color: white;
 
     right: 15%;
-    bottom: -25%;
+    bottom: -30%;
 }
 
-.n2 {
+.n3::before {
+    content: '';
     position: absolute;
-    height: 75%;
-    width: 30%;
-    border-radius: 50%;
-    background-color: white;
+    height: 100%;
+    width: 100%;
+    border-radius: 37% 63% 0% 100% / 50% 0% 100% 50%;
+    background-color: rgba(255,255,255);
 
-    right: 2%;
-    bottom: -3%;
+    right: 35%;
+    bottom: 0%;
+    opacity: 0.5;
+    transform: rotate(50deg);
 }
 
 .n4 {
@@ -199,8 +248,22 @@ body {
     border-radius: 50%;
     background-color: white;
 
-    right: 30%;
+    right: 25%;
     bottom: -35%;
+}
+
+.n4::before {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    border-radius: 37% 63% 0% 100% / 50% 0% 100% 50%;
+    background-color: rgba(255,255,255);
+
+    right: 155%;
+    bottom: 10%;
+    opacity: 0.5;
+    transform: rotate(150deg);
 }
 
 .n5 {
@@ -211,7 +274,21 @@ body {
     background-color: white;
 
     right: 45%;
-    bottom: -30%;
+    bottom: -45%;
+}
+
+.n5::before {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    background-color: rgba(255,255,255);
+
+    right: 165%;
+    bottom: 20%;
+    opacity: 0.5;
+    transform: rotate(10deg);
 }
 
 .n6 {
@@ -221,6 +298,100 @@ body {
     border-radius: 50%;
     background-color: white;
 
-    right: 45%;
-    bottom: -30%;
+    right: 70%;
+    bottom: -40%;
 }
+
+
+
+/* Estrellas */
+
+
+
+.estrellas {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    aspect-ratio: 2.1/1;
+    transition: 800ms ease-in-out;
+    bottom: 100%; 
+}
+
+.newStar {
+    bottom: 0%;
+}
+
+.star1 {
+    height: 25%;
+    width: 10%;
+    scale: 0.7;
+    background-color: white;
+    position: absolute;
+
+    left: 50%;
+    bottom: 50%;
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%,79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35% );
+    transform: rotate(-20deg);
+}
+
+.star2 {
+    height: 25%;
+    width: 10%;
+    scale: 0.7;
+    background-color: white;
+    position: absolute;
+
+    left: 40%;
+    bottom: 50%;
+    top: -1%;
+    scale: 0.5;
+    transform: rotate(20deg);
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%,79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35% );
+    
+}
+
+
+.star3 {
+    height: 25%;
+    width: 10%;
+    scale: 0.7;
+    background-color: white;
+    position: absolute;
+
+    left: 35%;
+    bottom: 50%;
+    scale: 0.5;
+    transform: rotate(60deg);
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%,79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35% );
+    
+}
+
+.star4 {
+    height: 25%;
+    width: 10%;
+    scale: 0.7;
+    background-color: white;
+    position: absolute;
+
+    left: 40%;
+    bottom: 30%;
+    scale: 0.3;
+    transform: rotate(50deg);
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%,79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35% );
+    
+}
+
+.star5 {
+    height: 25%;
+    width: 10%;
+    scale: 0.7;
+    background-color: white;
+    position: absolute;
+
+    left: 10%;
+    scale: 0.8;
+    transform: rotate(10deg);
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%,79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35% );
+    
+}
+
